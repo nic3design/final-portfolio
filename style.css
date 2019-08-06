@@ -1,0 +1,845 @@
+/* ==========================================================================
+ Main Elements
+========================================================================== */
+
+/** Sub-section comment block **/
+
+/* ==========================================================================
+ Colors
+========================================================================== */
+
+html {
+	--color-yellow: #fdcf0b;
+	--color-yellow-dark: #f1b619;
+	--color-yellow-light: #ffff54;
+
+	--color-black: #000;
+	--color-white: #fff;
+
+	--color-gray-medium: #2c2c2c;
+	--color-gray-dark: #171717;
+	--color-gray-light: #424242;
+	--color-gray-extralight: #555555;
+
+	--color-blue: #0197a6;
+	--color-blue-dark: #006977;
+	--color-blue-light: #56c8d7;
+
+
+	--primary-border: 2rem;
+
+	background-color: var(--color-gray-dark);
+	color: var(--color-white);
+
+	--gradient-gray: linear-gradient(#2c2c2c, #171717);
+	--gradient-yellow: linear-gradient(#ffff54, #fdcf0b);
+	--gradient-yellow-arc: linear-gradient(#fdcf0b, #f1b619, #fdcf0b);
+	--gradient-blue: linear-gradient(#0197a6, #006977);
+
+}
+
+a {
+	color: var(--color-black);
+}
+
+
+/* ==========================================================================
+ Typography
+========================================================================== */
+
+html {
+	--font-primary: 'Source Sans Pro', sans-serif;
+	--font-secondary: 'Maven Pro', sans-serif;
+
+	--ratio: 1.2;
+
+	--size-main-headline: calc(var(--size-sub-headline) * var(--ratio));
+	--size-sub-headline: calc(var(--size-base-4up) * var(--ratio));
+
+	--size-base-4up: calc(var(--size-base-3up) * var(--ratio));
+	--size-base-3up: calc(var(--size-base-2up) * var(--ratio));
+	--size-base-2up: calc(var(--size-base-1up) * var(--ratio));
+	--size-base-1up: calc(var(--size-base) * var(--ratio));
+
+	--size-base: calc(1rem * var(--ratio));
+
+	--size-base-1down: calc(.7rem * var(--ratio));
+	--size-base-2down: calc(.55rem * var(--ratio));
+
+
+	font-family: var(--font-primary);
+	line-height: 1.4;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: var(--color-white);
+	font-weight: normal;
+	line-height: 1.2;
+	margin: 0;
+	padding: 0;
+}
+
+h1, h2, h3 {
+	font-family: var(--font-secondary);
+}
+
+h1 {
+	font-size: var(--size-main-headline);
+}
+
+h2 {
+	font-size: var(--size-sub-headline);
+}
+
+h3 {
+	color: var(--color-blue);
+	font-size: var(--size-base-3up);
+	
+}
+
+h4 {
+	font-size: var(--size-base-3up);
+}
+
+h5 {
+	font-size: var(--size-base-2up);
+}
+
+h6 {
+	font-size: var(--size-base-1up);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	max-width: 30rem;
+}
+
+p, blockquote {
+	max-width: 32rem;
+}
+
+
+
+/* ==========================================================================
+ Layout
+========================================================================== */
+
+html {
+	color: var(--color-gray-light);
+}
+
+body {
+	margin: 0;
+}
+
+header, footer {
+	margin: 0;
+}
+
+ul {
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+li a {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+.title {
+	margin: 3rem 2rem 1rem;
+}
+
+
+/* ==========================================================================
+Buttons
+========================================================================== */
+
+.primary-button {
+	background: var(--color-blue);
+	box-shadow: 10px 10px 15px var(--color-black);
+	/*color: var(--color-gray);*/
+	font-size: var(--size-base);
+	font-weight: 700;
+	padding: 2rem 3rem;
+	margin: 1.5rem;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.primary-button:hover, .primary-button:focus {
+	background-color: var(--color-blue-dark);
+	box-shadow: none;
+	color: var(--color-white);
+}
+
+.primary-button:active {
+	background-color: var(--color-blue-light);
+}
+
+.secondary-button {
+	border: 5px solid var(--color-yellow);
+	box-shadow: 10px 10px 15px var(--color-black);
+	color: var(--color-white);
+	font-size: var(--size-base);
+	font-weight: 700;
+	padding: 1rem 2rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all .55s ease-out;
+}
+
+.secondary-button:hover, .secondary-button:focus {
+	background-color: var(--color-yellow);
+	color: var(--color-gray);
+	outline: none;
+	transition: all .55s ease-out;
+}
+
+.secondary-button:active {
+	background-color: var(--color-yellow-dark);
+	border: 5px solid var(--color-yellow-dark);
+}
+
+.tertiary-button {
+	padding: 1rem .5rem;
+	text-transform: uppercase;
+}
+
+.tertiary-button:hover, .tertiary-button:focus {
+	background-color: var(--color-gray-medium);
+	color: var(--color-yellow);
+}
+
+.tertiary-button:active {
+	background-color: var(--color-gray-extralight);
+}
+
+
+/* ==========================================================================
+Header
+========================================================================== */
+
+header a img {
+	padding: 0 1rem;
+	width: 60px;
+}
+
+header a {
+	color: var(--color-gray-light);
+	padding: 1rem;
+}
+
+header li a:hover, header li a:focus {
+	background-color: var(--color-yellow);
+}
+
+header li a:active {
+	background-color: var(--color-yellow-dark);
+}
+
+
+nav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+header {
+	background-color: var(--color-black);
+}
+
+header li, footer li {
+	display: inline-block;
+}
+
+.logo {
+	margin: 0;
+	padding: 1rem 0;
+}
+
+.current-page {
+	background-color: var(--color-yellow);
+}
+
+@media (min-width: 600px) {
+	nav {
+		flex-direction: row;
+	}
+
+	header a {
+		padding: 2.5rem 1rem;
+	}
+}
+
+
+/* ==========================================================================
+Hero
+========================================================================== */
+
+.hero {
+	align-items: center;
+	background-image: url(images/desk-top.jpg);
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 30vh;
+	min-height: 70vh;
+	text-align: center;
+}
+
+.hero h1 {
+	color: var(--color-yellow);
+}
+
+
+
+
+/* ==========================================================================
+Home Page
+========================================================================== */
+
+/** Profile Bio Section (Who I Am) **/
+
+
+.profile-card {
+	align-items: flex-start;
+	background: var(--gradient-yellow);
+	box-shadow: 10px 10px 15px var(--color-black);
+	flex-direction: column;
+	margin: 3rem auto 0;
+	max-width: 1850px;
+	padding: 0 3rem;
+}
+
+.profile-card h2 {
+	color: var(--color-black);
+	font-weight: 700;
+}
+
+.profile-card blockquote p, .profile-card cite {
+	color: var(--color-blue-dark);
+	font-weight: 700;
+	font-size: var(--size-base);
+}
+
+.profile-pic {
+	margin: 0 auto;
+	max-width: 50%;
+	display: block;
+}
+
+.profile-info {
+	padding: 1.5rem;
+	margin: auto;
+}
+
+.profile-info h3 {
+	max-width: 22rem;
+}
+
+.callout-group {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	max-width: 30rem;
+}
+
+.callout-group .primary-button {
+	margin: 0;
+}
+
+.callout {
+	color: var(--color-gray-medium);
+	font-family: var(--font-secondary);
+	font-size: var(--size-base-2up);
+	font-weight: 700;
+	padding: 3rem 0;
+}
+
+
+.social-icons img {
+	padding-left: 1rem;
+}
+
+.social-icons img {
+	height: 30px;
+}
+
+@media (min-width: 550px){
+	.callout-group {
+		flex-direction: row;
+	}
+}
+
+
+@media (min-width: 1200px){
+	.profile-card {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+/** What I Do Section **/
+
+.details {
+	display: flex;
+	flex-direction: column;
+}
+
+.details-info {
+	margin: 15vh auto 2rem;
+}
+
+.details-info p {
+	font-size: var(--size-base-1up);
+	color: var(--color-gray-extralight);
+}
+
+.detail-card-group {
+	display: grid;
+	grid-template-columns: repeat( 1, 1fr);
+	grid-gap: 1rem;
+	margin: auto;
+
+}
+
+.detail-card {
+	background: var(--gradient-gray);
+	box-shadow: 10px 10px 15px var(--color-black);
+	display: flex;
+	flex-direction: column;
+	height: 10rem;
+	justify-content: space-evenly;
+	max-width: 20rem;
+	padding: 2rem 1.5rem;
+}
+
+.detail-card h4 {
+	margin: 0 .75rem 1.5rem;
+}
+
+.detail-card img {
+	max-height: 40px;
+}
+
+
+.detail-card div {
+	display: flex;
+	align-items: baseline;
+}
+
+.detail-second {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+.detail-third {
+	grid-row-start: 3;
+}
+
+@media (min-width: 1200px){
+	
+	.details {
+		flex-direction: row;
+	}
+
+	.detail-card-group {
+		grid-template-columns: repeat( 2, 1fr);
+		grid-template-rows: repeat(3, 1fr);
+		margin: 15vh auto 2rem;
+	}
+	
+	.detail-second {
+		grid-column-start: 2;
+		grid-row-start: 2;
+	}
+	
+}
+
+
+/* ==========================================================================
+Footer
+========================================================================== */
+
+footer {
+	align-items: baseline;
+	background-color: var(--color-yellow);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding: 2rem 1rem;
+}
+
+footer img {
+	height: 30px;
+	padding-right: .5rem;
+}
+
+footer p {
+	font-weight: 700;
+	font-size: var(--size-base-2down);
+}
+
+footer li {
+	display: block;
+	padding: 1rem 0;
+}
+
+footer a {
+	text-decoration: none;
+}
+
+
+.footer-social-icons img{
+	padding: .5rem;
+	height: 20px;
+}
+
+@media(min-width: 750px) {
+	footer {
+		flex-direction: row;
+	}
+
+}
+
+@media(min-width: 550px) {
+	footer li {
+		display: inline-block;
+	}
+}
+
+/* ==========================================================================
+Portfolio Page
+========================================================================== */
+
+.title-portfolio {
+	margin: 3rem 0 2rem;
+}	
+
+.title-portfolio h2, .title-portfolio h3{
+	margin: auto;
+}	
+
+
+.thumbnail-group {
+	display: grid;
+	grid-template-columns: repeat( 1, 1fr);
+	margin: 0 auto 15rem;
+	max-width: 2400px;
+
+}
+
+.thumbnail {
+	background-image: var(--thumbnail-image);
+	background-size: cover;
+	min-height: 600px;
+	position: relative;
+	}
+
+.thumbnail-description {
+	background: rgba(0,0,0, 0.75);
+	bottom: 0;
+	color: var(--color-yellow);
+	font-family: var(--font-secondary);
+	font-size: var(--size-base-4up);
+	left: 0;
+	opacity: 0;
+	padding:  45% 2rem 0;
+	position: absolute;
+	right: 0;
+	text-align: center;
+	top: 0;
+	}
+
+.thumbnail-description p {
+	font-size: var(--size-base);
+	color: var(--color-white);
+}	
+
+.thumbnail:hover .thumbnail-description {
+	opacity: 1;
+	animation: slide-in .3s;
+	}
+
+
+@keyframes slide-in {
+	0% {
+		opacity: 0;
+		transform: translatex(-100vw);
+	}
+	
+	
+	100% {
+		opacity: 1;
+		transform: translatex(0);
+	}
+}
+
+
+@media(min-width: 850px) {
+
+	.thumbnail-group {
+		grid-template-columns: repeat( 2, 1fr );
+		
+	}
+}
+
+@media(min-width: 1300px) {
+
+	.thumbnail-group {
+		grid-template-columns: repeat( 3, 1fr );
+		
+	}
+}
+
+
+/* ==========================================================================
+First Project Page
+========================================================================== */
+
+.makecrate {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5rem;
+}
+
+.makecrate h2 {
+	margin: 2rem auto 1rem;
+}
+
+.makecrate h3 {
+	margin-top: 2rem;
+}
+
+.portfolio-full {
+	max-width: 75vw;
+	max-height: 250vh;
+}
+
+.scrollup-link {
+	background-color: var(--color-yellow);
+	padding: 1rem;
+	text-decoration: none;
+	margin-top: 2rem;
+}
+
+.scrollup-link:hover, .scrollup-link:focus {
+	background-color: var(--color-yellow-dark);
+	
+} 
+
+
+/* ==========================================================================
+Second Project Page
+========================================================================== */
+
+.booklet {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	margin: 5rem auto;
+}
+
+
+.booklet img {
+	max-width: 60%;
+	margin-bottom: 1rem;
+}
+
+
+
+/* ==========================================================================
+Contact Page
+========================================================================== */
+
+.map {
+	background-image: url(images/austin-map.png);
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	margin: auto;
+	min-width: calc(100vw - 2rem);
+}
+
+
+form {
+	background: var(--gradient-gray);
+	box-shadow: 10px 10px 15px var(--color-black);
+	color: var(--color-white);
+	font-family: var(--font-secondary);
+	margin: 1rem auto 3rem;
+	max-width: 30rem;
+	padding: 1rem;
+}
+
+input, form p {
+	display: block;
+	margin: 0 2rem 1rem;
+	padding: .5rem;
+}
+
+
+label {
+	display: block;
+	margin: .25rem 2rem .15rem;
+}
+
+input:focus, select:focus, textarea:focus {
+	box-shadow: 5px 8px 1rem var(--color-black);
+	outline: none;
+}
+
+textarea {
+	margin: 1rem 2rem 0;
+	min-height: 15rem;
+	min-width: 20rem;
+	padding: .5rem;
+}
+
+input[type=submit], button {
+	background-color: var(--color-yellow);
+	font-family: var(--font-secondary);
+	font-size: var(--size-base);
+	margin: 2rem;
+	padding: .7rem 1.5rem;
+}
+
+
+input[type=submit]:hover, button:hover {
+	background-color: var(--color-yellow-dark);
+}
+
+input[type=submit]:focus, button:focus {
+	box-shadow: 3px 3px var(--color-yellow-dark);
+	outline: none;
+}
+
+input[type=submit]:active, button:active {
+	background-color: var(--color-blue);
+}
+
+
+@media (min-width: 600px){
+	
+	textarea{
+		min-height: 10rem;
+		min-width: 25rem;
+	}
+
+	form {
+		max-width: 40rem;
+	}
+}
+
+/* ==========================================================================
+Resume Page
+========================================================================== */
+
+
+summary {
+	list-style-image: url(images/icons/arrow-right.svg);
+	padding: 2rem;
+}
+
+summary:focus {
+	outline: none;
+}
+
+summary::-webkit-details-marker {
+	background: url(images/icons/arrow-right.svg);
+	background-repeat: no-repeat;
+	color: transparent;
+	
+}
+
+details {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	max-width: 45rem;
+}	
+
+details[open] summary::-webkit-details-marker {
+	background: url(images/icons/arrow-down.svg);
+	background-repeat: no-repeat;
+}
+
+details div {
+	background-color: var(--color-gray-dark);
+	color: var(--color-white);
+	padding: 2rem 1rem;
+}
+
+span {
+	color: var(--color-gray-extralight);
+	font-weight: 400;
+}
+
+.resume-container {
+	margin: auto;
+	padding: 2rem;
+	background: var(--gradient-blue);
+
+}
+
+.resume-container h1 {
+	color: var(--color-black);
+	margin: auto;
+	max-width: 45rem;
+}
+
+.resume-topic {
+	align-items: baseline;
+	display: flex;
+}
+
+.resume-topic h2 {
+	margin: 1.25rem 0;
+}
+
+.resume-topic img {
+	max-height: 40px;
+	padding: 0 .75rem;
+}
+
+.resume-topic a {
+	color: var(--color-blue);
+}
+
+.resume-topic a:hover {
+	color: var(--color-blue-dark);
+}
+
+.work-card {
+	background: var(--gradient-gray);
+	box-shadow: 10px 10px 15px var(--color-black);
+	margin: 2rem auto;
+	max-width: 45rem;
+	padding: 1rem;
+}
+
+.work-card h3 {
+	font-size: var(--size-base);
+	margin: 0;
+}
+
+.work-card p, .work-card li {
+	color: var(--color-white);
+}
+
+.work-card li {
+	list-style-type: square;
+	margin-left: 1rem;
+}
+
